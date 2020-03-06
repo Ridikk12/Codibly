@@ -13,7 +13,7 @@ POC - proof of concept
 ## Decision:
 1. Ports and Adapters application architecture style. Using this style gives us an extensible solution. Having in mind how many emails we want to send and fact that we can scale not only horizontal (docker) but also by adding new smpt servers or external emails providers Ports And Adapters fits that purpose the best.
 2. Domain Driven Design - for Proof of concept application uses a DDD style but in my opinion for the as simple domain as we have here we should be more pragmatic.
-3. I didn’t implement CRQS - too small project
+3. I didn’t implement CQRS - too small project
 4. Validation - in the normal scenario I would use FluentValidation but for POC I implemented my own version.
 5. Repositories - in a normal scenario if we know that we stick to one DB type and it will not change in future we could use EF or MongoDb instead of having multiple providers. If we stick to EF instead of repository pattern we could use DBContext (Unit of Work) and DbSets (Repositories). 
 6. For testing purpose - TestServer would be nice for integration tests. 
